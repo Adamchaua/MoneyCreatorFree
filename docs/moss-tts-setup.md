@@ -29,7 +29,19 @@ Then make sure `ffmpeg` and `ffprobe` work from the terminal.
 
 ## 2. Prepare MOSS-TTS
 
-Recommended automated setup from inside MoneyCreatorFree:
+Recommended one-command setup from inside MoneyCreatorFree:
+
+```bash
+bash scripts/setup_all.sh
+```
+
+Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/setup_all.ps1
+```
+
+MOSS-only setup is also available:
 
 ```bash
 python -m moneycreator.cli setup-moss

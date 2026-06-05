@@ -133,6 +133,34 @@ docs/moss-tts-setup.md
 docs/workflow.md
 ```
 
+## 🖥️ Hardware Requirements
+
+GPU is optional. MoneyCreatorFree can run fully on CPU because MOSS-TTS-Nano is lightweight and FFmpeg rendering is CPU-friendly.
+
+| Component | Minimum | Recommended | Notes |
+| --- | --- | --- | --- |
+| CPU | 4 cores | 6-8 cores | More cores speed up FFmpeg and TTS. |
+| RAM | 4 GB | 8-16 GB | Whisper and MOSS dependencies need memory headroom. |
+| GPU | Not required | Optional NVIDIA GPU | Useful for faster Whisper/model workloads, but not required. |
+| Disk | 8 GB free | 20 GB+ free | MOSS dependencies, stock cache, and video outputs grow over time. |
+| OS | Linux/macOS/Windows | Linux or Windows 10+ | FFmpeg and Python 3.10+ required. |
+
+## 🧰 One-Command Install
+
+Linux/macOS:
+
+```bash
+bash scripts/setup_all.sh
+```
+
+Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/setup_all.ps1
+```
+
+Manual install is still supported through the Quickstart commands above.
+
 ## 📂 Output Structure
 
 Once generation is complete, the outputs are neatly organized:
@@ -160,12 +188,16 @@ Every video goes through an automated QA pipeline. `final.mp4` is only approved 
 
 ## 🤖 Agent Compatibility
 
-This repo is built to be driven by AI. It includes:
-- `AGENTS.md`: Guidelines for Hermes/Codex-style agents.
-- `CLAUDE.md`: System instructions for Claude Code.
-- `OPENCLAW.md`: Guidelines for OpenClaw.
+This repo is built to be driven by AI agents. It includes:
 
-*Agents should read these files before modifying code or running the pipeline.*
+| Agent | Guide |
+| --- | --- |
+| Hermes | `HERMES.md` |
+| Codex-style agents | `AGENTS.md` |
+| Claude Code | `CLAUDE.md` |
+| OpenClaw | `OPENCLAW.md` |
+
+*Agents should read their guide plus `docs/workflow.md` before modifying code or running the pipeline.*
 
 ## 🗺️ Roadmap
 
