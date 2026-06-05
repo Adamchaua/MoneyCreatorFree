@@ -98,6 +98,8 @@ If MoneyCreatorFree helps your workflow, you can support the project.
 > Maintainer note: replace these placeholders with your real wallet addresses before publishing.
 
 ```text
+PayPal: YOUR_PAYPAL_EMAIL
+GitHub Sponsors: https://github.com/sponsors/Adamchaua
 USDT TRC20: YOUR_USDT_TRC20_WALLET
 USDT BEP20: YOUR_USDT_BEP20_WALLET
 BTC: YOUR_BTC_WALLET
