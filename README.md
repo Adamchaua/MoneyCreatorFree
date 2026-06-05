@@ -71,25 +71,44 @@ Here are sample vertical videos (9:16) generated completely automatically. The G
 ```bash
 git clone https://github.com/Adamchaua/MoneyCreatorFree.git
 cd MoneyCreatorFree
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -U pip
+pip install -e .
 cp .env.example .env
 ```
 
 Edit `.env` to add your credentials and paths:
+
 ```text
 PEXELS_API_KEY=your_pexels_api_key_here
-MOSS_DIR=/path/to/MOSS-TTS-Nano-main
+MOSS_DIR=/absolute/path/to/MOSS-TTS-Nano-main
+```
+
+MOSS-TTS is installed separately. Follow the setup guide before rendering:
+
+```text
+docs/moss-tts-setup.md
 ```
 
 ### Run Examples
 
 Run a single video config:
+
 ```bash
 python -m moneycreator.cli create --config examples/economy_15s.yaml
 ```
 
 Run all example configs in batch mode:
+
 ```bash
 python -m moneycreator.cli batch --configs examples
+```
+
+For the full interaction flow, config format, iteration loop, and agent workflow, read:
+
+```text
+docs/workflow.md
 ```
 
 ## 📂 Output Structure
