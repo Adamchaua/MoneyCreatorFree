@@ -30,16 +30,29 @@ Just provide an idea or YAML config, and **MoneyCreatorFree** will automatically
 
 Here are some sample vertical videos (9:16) generated completely automatically.
 
-*(Note: If videos do not auto-play, click the links to view them)*
+<table>
+<thead>
+<tr>
+<th align="center">📈 Why prices keep rising</th>
+<th align="center">📱 Attention is social power</th>
+<th align="center">💰 The first rule of personal finance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/economy.mp4" controls></video></td>
+<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/society.mp4" controls></video></td>
+<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/finance.mp4" controls></video></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/economy.mp4">▶️ Watch / Download</a></td>
+<td align="center"><a href="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/society.mp4">▶️ Watch / Download</a></td>
+<td align="center"><a href="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/finance.mp4">▶️ Watch / Download</a></td>
+</tr>
+</tbody>
+</table>
 
-### 📈 Why prices keep rising
-https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/economy.mp4
-
-### 📱 Attention is social power
-https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/society.mp4
-
-### 💰 The first rule of personal finance
-https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/finance.mp4
+> If GitHub mobile does not show inline playback, use the direct video links above.
 
 ## ⚡ Quickstart
 
