@@ -28,26 +28,18 @@ Just provide an idea or YAML config, and **MoneyCreatorFree** will automatically
 
 ## 🎬 Example Demos
 
-Here are some sample vertical videos (9:16) generated completely automatically:
+Here are some sample vertical videos (9:16) generated completely automatically.
 
-<table>
-<thead>
-<tr>
-<th align="center">📈 Why prices keep rising</th>
-<th align="center">📱 Attention is social power</th>
-<th align="center">💰 The first rule of personal finance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/economy.mp4"></video></td>
-<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/society.mp4"></video></td>
-<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/finance.mp4"></video></td>
-</tr>
-</tbody>
-</table>
+*(Note: If videos do not auto-play, click the links to view them)*
 
-> *Note: Click to play the video. If the video does not play inline, you can view the source files directly in the `assets/demos/` folder.*
+### 📈 Why prices keep rising
+https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/economy.mp4
+
+### 📱 Attention is social power
+https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/society.mp4
+
+### 💰 The first rule of personal finance
+https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/finance.mp4
 
 ## ⚡ Quickstart
 
