@@ -28,7 +28,7 @@ Just provide an idea or YAML config, and **MoneyCreatorFree** will automatically
 
 ## 🎬 Example Demos
 
-Here are some sample vertical videos (9:16) generated completely automatically.
+Here are sample vertical videos (9:16) generated completely automatically. The GIF previews render directly on GitHub, and each preview links to the uploaded MP4 demo.
 
 <table>
 <thead>
@@ -40,19 +40,31 @@ Here are some sample vertical videos (9:16) generated completely automatically.
 </thead>
 <tbody>
 <tr>
-<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/economy.mp4" controls></video></td>
-<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/society.mp4" controls></video></td>
-<td align="center"><video src="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/finance.mp4" controls></video></td>
+<td align="center">
+<a href="https://raw.githubusercontent.com/Adamchaua/MoneyCreatorFree/main/assets/demos/economy.mp4">
+<img src="assets/demos/previews/economy.gif" width="220" alt="Economy demo preview">
+</a>
+</td>
+<td align="center">
+<a href="https://raw.githubusercontent.com/Adamchaua/MoneyCreatorFree/main/assets/demos/society.mp4">
+<img src="assets/demos/previews/society.gif" width="220" alt="Society demo preview">
+</a>
+</td>
+<td align="center">
+<a href="https://raw.githubusercontent.com/Adamchaua/MoneyCreatorFree/main/assets/demos/finance.mp4">
+<img src="assets/demos/previews/finance.gif" width="220" alt="Finance demo preview">
+</a>
+</td>
 </tr>
 <tr>
-<td align="center"><a href="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/economy.mp4">▶️ Watch / Download</a></td>
-<td align="center"><a href="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/society.mp4">▶️ Watch / Download</a></td>
-<td align="center"><a href="https://github.com/Adamchaua/MoneyCreatorFree/raw/main/assets/demos/finance.mp4">▶️ Watch / Download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/Adamchaua/MoneyCreatorFree/main/assets/demos/economy.mp4">▶ Watch MP4</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/Adamchaua/MoneyCreatorFree/main/assets/demos/society.mp4">▶ Watch MP4</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/Adamchaua/MoneyCreatorFree/main/assets/demos/finance.mp4">▶ Watch MP4</a></td>
 </tr>
 </tbody>
 </table>
 
-> If GitHub mobile does not show inline playback, use the direct video links above.
+> GitHub does not always render HTML `<video>` tags in README files, so this README uses real inline GIF previews plus direct MP4 links for reliable playback.
 
 ## ⚡ Quickstart
 
