@@ -1,12 +1,12 @@
-# MoneyCreatorFree
+# 🎬 MoneyCreatorFree
 
 Free, local-first short-video creation engine for agents and creators.
 
 MoneyCreatorFree turns an idea or YAML config into a vertical short video using MOSS-TTS, Whisper subtitles, free Pexels stock video, FFmpeg rendering, and strict QA.
 
-![Pipeline](assets/infographic/pipeline.svg)
+<img src="assets/infographic/pipeline.svg" alt="Pipeline" width="100%" />
 
-## Features
+## 🚀 Features
 
 - MOSS-TTS local voice generation
 - Adam voice by default, natural pitch
@@ -18,7 +18,7 @@ MoneyCreatorFree turns an idea or YAML config into a vertical short video using 
 - Strict QA report for every render
 - Agent-ready docs for Hermes, OpenClaw, Claude Code, and Codex-style agents
 
-## Quickstart
+## ⚡ Quickstart
 
 ```bash
 git clone <your-repo-url> MoneyCreatorFree
@@ -45,15 +45,15 @@ Run all examples:
 python -m moneycreator.cli batch --configs examples
 ```
 
-## Example Topics
+## 💡 Example Topics & Demos
 
-| File | Topic | Category | Target |
-| --- | --- | --- | --- |
-| `examples/economy_15s.yaml` | Why prices keep rising | Economy | 15s |
-| `examples/society_15s.yaml` | Attention is social power | Society | 15s |
-| `examples/finance_15s.yaml` | The first rule of personal finance | Finance | 15s |
+| File | Topic | Category | Target | Demo |
+| --- | --- | --- | --- | --- |
+| `examples/economy_15s.yaml` | Why prices keep rising | Economy | 15s | [🎥 Watch](assets/demos/economy.mp4) |
+| `examples/society_15s.yaml` | Attention is social power | Society | 15s | [🎥 Watch](assets/demos/society.mp4) |
+| `examples/finance_15s.yaml` | The first rule of personal finance | Finance | 15s | [🎥 Watch](assets/demos/finance.mp4) |
 
-## Output Structure
+## 📂 Output Structure
 
 ```text
 outputs/<run_id>/
@@ -66,7 +66,7 @@ outputs/<run_id>/
 └── qa.json
 ```
 
-## QA Checks
+## ✅ QA Checks
 
 Each run checks:
 
@@ -77,7 +77,7 @@ Each run checks:
 - at least 3 stock clips
 - final video file size above 300KB
 
-## Agent Compatibility
+## 🤖 Agent Compatibility
 
 This repo includes:
 
@@ -87,26 +87,19 @@ This repo includes:
 
 Agents should read those files before editing or running the pipeline.
 
-## Important Security Note
+## 🔒 Important Security Note
 
 Do not commit `.env` or real API keys. Users only need to add their own Pexels API key after cloning.
 
-## Donate
+## ❤️ Donate
 
 If MoneyCreatorFree helps your workflow, you can support the project.
 
-> Maintainer note: replace these placeholders with your real wallet addresses before publishing.
+- **PayPal:** `ckelvinkhanh32@gmail.com`
+- **GitHub Sponsors:** [https://github.com/sponsors/Adamchaua](https://github.com/sponsors/Adamchaua)
+- **EVM Wallet (ETH/BNB/Polygon etc):** `0x1ecab01075f3bdf1b56b7D849c8e28ef88943624`
 
-```text
-PayPal: YOUR_PAYPAL_EMAIL
-GitHub Sponsors: https://github.com/sponsors/Adamchaua
-USDT TRC20: YOUR_USDT_TRC20_WALLET
-USDT BEP20: YOUR_USDT_BEP20_WALLET
-BTC: YOUR_BTC_WALLET
-ETH: YOUR_ETH_WALLET
-```
-
-## Roadmap
+## 🗺️ Roadmap
 
 - Pixabay provider
 - JSON/YAML batch templates
