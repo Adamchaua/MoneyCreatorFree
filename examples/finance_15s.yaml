@@ -1,0 +1,29 @@
+id: finance_15s
+topic: "The first rule of personal finance"
+category: finance
+duration_target: 15
+language: English
+script: >
+  The first rule of personal finance is simple: spend less than you earn, then make the gap work for you. Wealth begins when your money starts buying time, options, and freedom. Small gaps, invested consistently, become real power.
+voice:
+  provider: moss
+  name: Adam
+subtitle:
+  provider: whisper
+  whisper_model: tiny
+  font: DejaVu Sans Condensed
+  font_size: 42
+stock:
+  provider: pexels
+  clips_per_term: 1
+  terms:
+    - budgeting laptop
+    - saving money wallet
+    - personal finance
+    - calculator money
+render:
+  aspect: "9:16"
+  title_font: DejaVuSansCondensed-Bold
+qa:
+  strict: true
+  duration_tolerance: 5

@@ -1,0 +1,15 @@
+[project]
+name = "moneycreatorfree"
+version = "0.1.0"
+description = "Free short-video creation engine with MOSS-TTS, Whisper subtitles, Pexels stock, FFmpeg rendering, and strict QA."
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31",
+  "PyYAML>=6.0"
+]
+
+[project.scripts]
+moneycreator = "moneycreator.cli:main"
+
+[tool.setuptools]
+packages = ["moneycreator"]

@@ -1,0 +1,29 @@
+id: economy_15s
+topic: "Why prices keep rising"
+category: economy
+duration_target: 15
+language: English
+script: >
+  Prices rise when money loses purchasing power, supply gets tighter, or demand grows faster than production. Inflation feels small at first, but over time it changes every budget.
+voice:
+  provider: moss
+  name: Adam
+subtitle:
+  provider: whisper
+  whisper_model: tiny
+  font: DejaVu Sans Condensed
+  font_size: 42
+stock:
+  provider: pexels
+  clips_per_term: 1
+  terms:
+    - city market shopping
+    - grocery prices
+    - economy money
+    - people buying food
+render:
+  aspect: "9:16"
+  title_font: DejaVuSansCondensed-Bold
+qa:
+  strict: true
+  duration_tolerance: 5

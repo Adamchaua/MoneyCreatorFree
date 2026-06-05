@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="MoneyCreatorFree pipeline">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="1" stop-color="#16231b"/>
+    </linearGradient>
+    <style>
+      .title{font:700 34px DejaVu Sans,Arial,sans-serif;fill:#fff}
+      .label{font:700 18px DejaVu Sans,Arial,sans-serif;fill:#fff}
+      .small{font:400 13px DejaVu Sans,Arial,sans-serif;fill:#d9e8ee}
+      .box{fill:#ffffff10;stroke:#ffffff33;stroke-width:2;rx:18}
+      .arrow{stroke:#00e7ff;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#00e7ff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <text class="title" x="50" y="58">MoneyCreatorFree Pipeline</text>
+  <g transform="translate(50 105)">
+    <rect class="box" width="150" height="120"/>
+    <text class="label" x="24" y="45">Script</text>
+    <text class="small" x="24" y="72">topic + YAML</text>
+  </g>
+  <path class="arrow" d="M205 165 H285"/>
+  <g transform="translate(295 105)">
+    <rect class="box" width="150" height="120"/>
+    <text class="label" x="24" y="45">MOSS TTS</text>
+    <text class="small" x="24" y="72">Adam voice</text>
+  </g>
+  <path class="arrow" d="M450 165 H530"/>
+  <g transform="translate(540 105)">
+    <rect class="box" width="150" height="120"/>
+    <text class="label" x="24" y="45">Whisper</text>
+    <text class="small" x="24" y="72">auto subtitle</text>
+  </g>
+  <path class="arrow" d="M695 165 H775"/>
+  <g transform="translate(785 105)">
+    <rect class="box" width="150" height="120"/>
+    <text class="label" x="24" y="45">Pexels</text>
+    <text class="small" x="24" y="72">multi-stock</text>
+  </g>
+  <path class="arrow" d="M940 165 H1020"/>
+  <g transform="translate(1030 105)">
+    <rect class="box" width="150" height="120"/>
+    <text class="label" x="24" y="45">FFmpeg</text>
+    <text class="small" x="24" y="72">render + QA</text>
+  </g>
+  <text class="small" x="50" y="310">Local-first voice + auto-synced captions + free stock clips + strict QA</text>
+</svg>

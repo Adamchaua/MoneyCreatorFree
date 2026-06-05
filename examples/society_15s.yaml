@@ -1,0 +1,29 @@
+id: society_15s
+topic: "Attention is social power"
+category: society
+duration_target: 15
+language: English
+script: >
+  In modern society, attention is power. The people who control what we watch can influence what we buy, believe, and become. Protecting focus is now a life skill. If you choose your inputs carefully, you choose your future more carefully too.
+voice:
+  provider: moss
+  name: Adam
+subtitle:
+  provider: whisper
+  whisper_model: tiny
+  font: DejaVu Sans Condensed
+  font_size: 42
+stock:
+  provider: pexels
+  clips_per_term: 1
+  terms:
+    - social media phone
+    - city crowd walking
+    - people using phones
+    - focused person laptop
+render:
+  aspect: "9:16"
+  title_font: DejaVuSansCondensed-Bold
+qa:
+  strict: true
+  duration_tolerance: 5
