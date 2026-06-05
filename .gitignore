@@ -1,5 +1,6 @@
 outputs/
 stock_cache/
+third_party/
 .env
 __pycache__/
 *.pyc

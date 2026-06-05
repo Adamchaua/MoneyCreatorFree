@@ -25,6 +25,7 @@ Just provide an idea or YAML config, and **MoneyCreatorFree** will automatically
 - [x] **High-Quality Rendering:** FFmpeg 9:16 vertical video renderer with lightweight motion overlays.
 - [x] **Strict QA Checks:** Automated quality assurance for duration, sync, transcript coverage, and output size.
 - [x] **Agent-Ready:** Native compatibility and instructions for Hermes, OpenClaw, Claude Code, and Codex-style agents.
+- [x] **End-to-End CLI:** Includes `setup-moss`, `doctor`, and an interactive `init` wizard for topic, duration, voice, subtitle font, and stock keywords.
 
 ## 🎬 Example Demos
 
@@ -85,10 +86,30 @@ PEXELS_API_KEY=your_pexels_api_key_here
 MOSS_DIR=/absolute/path/to/MOSS-TTS-Nano-main
 ```
 
-MOSS-TTS is installed separately. Follow the setup guide before rendering:
+Install MOSS-TTS-Nano into this repo's ignored `third_party/` folder:
 
-```text
-docs/moss-tts-setup.md
+```bash
+python -m moneycreator.cli setup-moss
+```
+
+Check the full environment before rendering:
+
+```bash
+python -m moneycreator.cli doctor
+```
+
+### Interactive Wizard
+
+Create a video config by answering guided questions for topic, length, voice, subtitle font, Whisper model, and stock keywords:
+
+```bash
+python -m moneycreator.cli init
+```
+
+Create the config and render immediately:
+
+```bash
+python -m moneycreator.cli init --render
 ```
 
 ### Run Examples
@@ -105,9 +126,10 @@ Run all example configs in batch mode:
 python -m moneycreator.cli batch --configs examples
 ```
 
-For the full interaction flow, config format, iteration loop, and agent workflow, read:
+Detailed setup and workflow docs:
 
 ```text
+docs/moss-tts-setup.md
 docs/workflow.md
 ```
 

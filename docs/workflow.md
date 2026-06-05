@@ -18,7 +18,35 @@ Idea / YAML config
 
 ## User Interaction Flow
 
-MoneyCreatorFree is currently config-driven. The user edits a YAML file, runs the CLI, then reviews `final.mp4` and `qa.json`.
+MoneyCreatorFree supports two flows:
+
+1. **Interactive wizard:** answer guided questions and let the CLI create the YAML config.
+2. **Manual config:** edit a YAML file directly, run the CLI, then review `final.mp4` and `qa.json`.
+
+### Interactive Wizard
+
+```bash
+python -m moneycreator.cli init
+```
+
+The wizard asks for:
+
+- video topic
+- category
+- video length in minutes
+- language
+- MOSS voice
+- subtitle font
+- subtitle size
+- Whisper model
+- stock-video search terms
+- custom script or suggested script
+
+Render immediately after the wizard:
+
+```bash
+python -m moneycreator.cli init --render
+```
 
 ### 1. Pick a Topic
 
@@ -125,23 +153,18 @@ When an AI agent edits or runs this repo, follow this order:
 
 ## Current Limitations
 
-- There is no web UI yet.
-- There is no interactive prompt wizard yet.
-- MOSS-TTS must be installed separately and linked through `MOSS_DIR`.
+- There is no web UI yet; interaction is CLI-based.
+- MOSS-TTS is cloned into `third_party/` by `setup-moss`, but the large MOSS dependency is not committed to Git.
 - Pexels is the only stock-video provider currently implemented.
-- The CLI requires YAML configs instead of accepting a raw topic directly.
+- The wizard suggests scripts and stock keywords, but it does not yet call an LLM to generate advanced scripts.
 
-## Recommended Future Interaction Flow
+## Useful Commands
 
-A future interactive mode should ask:
-
-```text
-1. What topic do you want?
-2. What language?
-3. Target duration: 15s, 30s, or 60s?
-4. Voice: Adam or another installed MOSS voice?
-5. Stock keywords?
-6. Render now?
+```bash
+python -m moneycreator.cli setup-moss
+python -m moneycreator.cli doctor
+python -m moneycreator.cli init
+python -m moneycreator.cli init --render
+python -m moneycreator.cli create --config examples/economy_15s.yaml
+python -m moneycreator.cli batch --configs examples
 ```
-
-Then it should generate a YAML config automatically and run the same pipeline.

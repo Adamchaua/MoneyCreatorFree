@@ -1,6 +1,6 @@
 # MOSS-TTS Setup
 
-MoneyCreatorFree does not vendor MOSS-TTS inside this repository. You install MOSS-TTS once, then point `MOSS_DIR` in `.env` to that folder.
+MoneyCreatorFree can install MOSS-TTS-Nano for you into the ignored `third_party/` folder. You can also point `MOSS_DIR` in `.env` to an existing MOSS-TTS-Nano checkout.
 
 ## Requirements
 
@@ -29,11 +29,25 @@ Then make sure `ffmpeg` and `ffprobe` work from the terminal.
 
 ## 2. Prepare MOSS-TTS
 
-Clone or extract MOSS-TTS-Nano somewhere outside this repo, for example:
+Recommended automated setup from inside MoneyCreatorFree:
+
+```bash
+python -m moneycreator.cli setup-moss
+```
+
+This clones `OpenMOSS/MOSS-TTS-Nano` into:
+
+```text
+third_party/MOSS-TTS-Nano
+```
+
+Then it creates a MOSS `.venv`, installs `requirements.txt`, and installs `openai-whisper`.
+
+You can also use an existing MOSS-TTS-Nano checkout:
 
 ```bash
 cd ~/work
-git clone <MOSS-TTS-Nano-repo-url> MOSS-TTS-Nano-main
+git clone https://github.com/OpenMOSS/MOSS-TTS-Nano.git MOSS-TTS-Nano-main
 cd MOSS-TTS-Nano-main
 python3 -m venv .venv
 . .venv/bin/activate

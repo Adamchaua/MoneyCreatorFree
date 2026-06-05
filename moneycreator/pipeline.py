@@ -7,6 +7,8 @@ from pathlib import Path
 import requests
 import yaml
 
+from .moss import resolve_moss_dir, venv_bin, venv_python
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -81,33 +83,57 @@ def load_config(config_path):
 
 
 def create_voice(config, run_dir, env):
-    moss_dir = Path(env.get("MOSS_DIR") or "")
-    if not moss_dir.exists():
-        raise RuntimeError("MOSS_DIR is not set or does not exist. Copy .env.example to .env and set MOSS_DIR.")
+    moss_dir = resolve_moss_dir(env)
+    if not moss_dir:
+        raise RuntimeError(
+            "MOSS-TTS is not installed. Run `python -m moneycreator.cli setup-moss` "
+            "or set MOSS_DIR to a prepared MOSS-TTS-Nano directory."
+        )
     voice = config.get("voice", {}).get("name", "Adam")
     script_file = run_dir / "script.txt"
     raw = run_dir / "voice.wav"
-    cmd = (
-        f". .venv/bin/activate && python infer_onnx.py --voice {voice} "
-        f"--text-file {script_file} --output-audio-path {raw} "
-        "--disable-wetext-processing --cpu-threads 4 --max-new-frames 500"
-    )
-    run(["bash", "-lc", cmd], cwd=moss_dir, timeout=300)
+    run([
+        str(venv_python(moss_dir)),
+        "infer_onnx.py",
+        "--voice",
+        voice,
+        "--text-file",
+        str(script_file),
+        "--output-audio-path",
+        str(raw),
+        "--disable-wetext-processing",
+        "--cpu-threads",
+        str(config.get("voice", {}).get("cpu_threads", 4)),
+        "--max-new-frames",
+        str(config.get("voice", {}).get("max_new_frames", 500)),
+    ], cwd=moss_dir, timeout=300)
     return raw
 
 
 def transcribe(config, audio, run_dir, env):
-    moss_dir = Path(env.get("MOSS_DIR") or "")
+    moss_dir = resolve_moss_dir(env)
+    if not moss_dir:
+        raise RuntimeError("MOSS-TTS is not installed, so Whisper is not available either.")
     asr_dir = run_dir / "asr"
     asr_dir.mkdir(exist_ok=True)
     model = config.get("subtitle", {}).get("whisper_model", "tiny")
     lang = config.get("language", "English")
-    cmd = (
-        f". .venv/bin/activate && whisper {audio} --model {model} "
-        f"--language {lang} --task transcribe --output_format json "
-        f"--output_dir {asr_dir} --fp16 False"
-    )
-    run(["bash", "-lc", cmd], cwd=moss_dir, timeout=240)
+    run([
+        str(venv_bin(moss_dir, "whisper")),
+        str(audio),
+        "--model",
+        model,
+        "--language",
+        lang,
+        "--task",
+        "transcribe",
+        "--output_format",
+        "json",
+        "--output_dir",
+        str(asr_dir),
+        "--fp16",
+        "False",
+    ], cwd=moss_dir, timeout=240)
     return asr_dir / f"{Path(audio).stem}.json"
 
 
